@@ -15,6 +15,11 @@ import com.profjk.holidaylist.network.Holiday
 import com.profjk.holidaylist.viewmodels.HolidayViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
+/**
+ * HolidayList created by aydin
+ * student ID : 991521740
+ * on 10/12/20 */
+
 class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener, OnItemClickListener {
     private val TAG = this@MainActivity.toString()
 

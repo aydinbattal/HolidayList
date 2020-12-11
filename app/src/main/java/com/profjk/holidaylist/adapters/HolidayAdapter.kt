@@ -53,7 +53,6 @@ class HolidayAdapter(
     }
 }
 
-
 interface OnItemClickListener{
     fun onItemClicked(holiday: Holiday)
 }

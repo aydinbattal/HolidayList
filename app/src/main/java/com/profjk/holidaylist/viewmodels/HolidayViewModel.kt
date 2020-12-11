@@ -17,16 +17,16 @@ import java.lang.Exception
 
 class HolidayViewModel : ViewModel() {
 
-    private val holiday = MutableLiveData<List<Holiday>>()
+    private val holidays = MutableLiveData<List<Holiday>>()
 
     val response: MutableLiveData<List<Holiday>>
-        get() = holiday
+        get() = holidays
     
     fun getHolidayInfo(apiUrl: String){
         viewModelScope.launch{
             try{
-                val holiday = HolidaysApi.RETROFIT_SERVICE_HOLIDAY.retrieveResponse(apiUrl)
-                this@HolidayViewModel.holiday.postValue(holiday)
+                val holidays = HolidaysApi.RETROFIT_SERVICE_HOLIDAY.retrieveResponse(apiUrl)
+                this@HolidayViewModel.holidays.postValue(holidays)
             }catch (ex: Exception){
                 Log.e("HolidayViewModel", ex.localizedMessage)
             }
