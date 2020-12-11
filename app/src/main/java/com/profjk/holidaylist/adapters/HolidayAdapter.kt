@@ -44,7 +44,7 @@ class HolidayAdapter(
 
         fun bind(holiday: Holiday, clickListener: OnItemClickListener){
             tvDate.setText(holiday.date.toString())
-            tvHolidayName.setText(holiday.date.toString())
+            tvHolidayName.setText(holiday.name.toString())
 
             itemView.setOnClickListener{
                 clickListener.onItemClicked(holiday)

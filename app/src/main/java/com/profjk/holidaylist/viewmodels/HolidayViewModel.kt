@@ -17,9 +17,9 @@ import java.lang.Exception
 
 class HolidayViewModel : ViewModel() {
 
-    private val holiday = MutableLiveData<Holiday>()
+    private val holiday = MutableLiveData<List<Holiday>>()
 
-    val response: LiveData<Holiday>
+    val response: MutableLiveData<List<Holiday>>
         get() = holiday
     
     fun getHolidayInfo(apiUrl: String){
